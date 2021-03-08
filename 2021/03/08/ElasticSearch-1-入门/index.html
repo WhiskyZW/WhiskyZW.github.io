@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="学习写博客"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="小张"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="ElasticSearch-1-入门"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="学习写博客"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="WhiskyZW"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://example.comimg/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="http://example.comimg/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>ElasticSearch-1-入门 - WhiskyZW</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">张大厨</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>ElasticSearch-1-入门</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-03-08
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="ElasticSearch-1-入门"><a href="#ElasticSearch-1-入门" class="headerlink" title="ElasticSearch - 1 - 入门"></a>ElasticSearch - 1 - 入门</h1><h2 id="简介-相关概念"><a href="#简介-相关概念" class="headerlink" title="简介+相关概念"></a>简介+相关概念</h2><blockquote>
+<p> Lucene</p>
+</blockquote>
+<p><strong>Lucene</strong>是一个开放源代码的全文检索引擎工具包。但它不是一个完整的全文检索引擎，而是一个全文检索引擎的架构，提供了完整的查询引擎和索引引擎，部分文本分析引擎。</p>
+<p><strong>Elasticsearch</strong>是一个基于<strong>Lucene</strong>的搜索服务器。</p>
+<p><strong>Elasticsearch</strong>是一个分布式、高扩展、高实时的搜索与数据分析引擎。</p>
+<blockquote>
+<p>ELK</p>
+</blockquote>
+<ol>
+<li><strong>Elasticsearch</strong>是个开源分布式搜索引擎。</li>
+<li><strong>Logstash</strong>是一个完全开源的工具，他可以对你的日志进行收集、过滤，并将其存储供以后使用。</li>
+<li><strong>Kibana</strong> 也是一个开源和免费的工具，它Kibana可以为 Logstash 和 ElasticSearch 提供的日志分析友好的 Web 界面，可以帮助您汇总、分析和搜索重要数据日志。</li>
+</ol>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>注意：所有版本一定要一致</strong></p>
+<blockquote>
+<p> Elasticsearch</p>
+</blockquote>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://www.elastic.co/cn/downloads/elasticsearch">https://www.elastic.co/cn/downloads/elasticsearch</a></p>
+<ol>
+<li><p>下载解压；</p>
+</li>
+<li><p>打开/bin/elasticsearch.bat</p>
+</li>
+<li><p>请求 <a href="http://localhost:9200，返回以下json即为安装成功">http://localhost:9200，返回以下json即为安装成功</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span> : <span class="string">&quot;DESKTOP-02VKKJC&quot;</span>,</span><br><span class="line">  <span class="string">&quot;cluster_name&quot;</span> : <span class="string">&quot;elasticsearch&quot;</span>,</span><br><span class="line">  <span class="string">&quot;cluster_uuid&quot;</span> : <span class="string">&quot;yaanh4h2QeWUJpI8S_Pjlg&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span> : &#123;</span><br><span class="line">    <span class="string">&quot;number&quot;</span> : <span class="string">&quot;7.11.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build_flavor&quot;</span> : <span class="string">&quot;default&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build_type&quot;</span> : <span class="string">&quot;zip&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build_hash&quot;</span> : <span class="string">&quot;ff17057114c2199c9c1bbecc727003a907c0db7a&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build_date&quot;</span> : <span class="string">&quot;2021-02-15T13:44:09.394032Z&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build_snapshot&quot;</span> : <span class="keyword">false</span>,</span><br><span class="line">    <span class="string">&quot;lucene_version&quot;</span> : <span class="string">&quot;8.7.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;minimum_wire_compatibility_version&quot;</span> : <span class="string">&quot;6.8.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;minimum_index_compatibility_version&quot;</span> : <span class="string">&quot;6.0.0-beta1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;tagline&quot;</span> : <span class="string">&quot;You Know, for Search&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<blockquote>
+<p>Kibana</p>
+</blockquote>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://www.elastic.co/cn/downloads/kibana">https://www.elastic.co/cn/downloads/kibana</a></p>
+<ol>
+<li>下载解压</li>
+<li>打开/bin/kibana.bat</li>
+<li>请求 <a href="http://localhost:5601，返回一个前端页面如下：">http://localhost:5601，返回一个前端页面如下：</a><br><img src="/2021/03/08/ElasticSearch-1-%E5%85%A5%E9%97%A8/kibana.jpg" alt="Kibana"></li>
+</ol>
+<ul>
+<li><p>跨域问题处理方式<br>在es解压包/bin/config/elasticsearch/yml中添加</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http.cors.enabled: <span class="keyword">true</span></span><br><span class="line">http.cors.allow-origin: <span class="string">&quot;*&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>elasticsearch-head</p>
+</blockquote>
+<p>GitHub地址：<a target="_blank" rel="noopener" href="https://github.com/mobz/elasticsearch-head">https://github.com/mobz/elasticsearch-head</a></p>
+<p>作用：elasticSearch的客户端工具，基于node.js的前端工程</p>
+<ol>
+<li>拉取项目，下载zip或者用git拉取</li>
+<li>npm install/cnpm install</li>
+<li>npm run start</li>
+<li>访问 <a target="_blank" rel="noopener" href="http://localhost:9100/">http://localhost:9100</a></li>
+</ol>
+<blockquote>
+<p>elasticsearch-analysis-ik</p>
+</blockquote>
+<p>GitHub地址：<a target="_blank" rel="noopener" href="https://github.com/medcl/elasticsearch-analysis-ik">https://github.com/medcl/elasticsearch-analysis-ik</a></p>
+<p>作用：用户中文分词</p>
+<ol>
+<li>下载对应版本ik（不是拉取代码, Releases中找到对应版本）</li>
+<li>解压到es的plugins目录中，删除压缩包</li>
+<li>重启es, 在kibana中可以测试</li>
+<li>附加：ik中config下的IKAnalyzer.cfg.xml可以添加自定义扩展分词字典或者远程扩展分词字典，字典文件为xxx.dic文件</li>
+</ol>
+<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><blockquote>
+<p>Node（节点）和Cluster（集群）</p>
+</blockquote>
+<p>Elastic 本质上是一个分布式数据库，允许多台服务器协同工作，每台服务器可以运行多个 Elastic 实例。</p>
+<p>单个 Elastic 实例称为一个节点（node）。一组节点构成一个集群（cluster）。</p>
+<blockquote>
+<p>Index 索引</p>
+</blockquote>
+<p>Elastic 会索引所有字段，经过处理后写入一个反向索引（Inverted Index）。查找数据的时候，直接查找该索引。</p>
+<p>所以，Elastic 数据管理的顶层单位就叫做 Index（索引）。它是单个数据库的同义词。每个 Index （即数据库）的名字必须是小写。</p>
+<blockquote>
+<p>Document 文档</p>
+</blockquote>
+<p>Index 里面单条的记录称为 Document（文档）。许多条 Document 构成了一个 Index。</p>
+<p>同一个 Index 里面的 Document，不要求有相同的结构（scheme），但是最好保持相同，这样有利于提高搜索效率。</p>
+<blockquote>
+<p>Type 类型 （即将淘汰）</p>
+</blockquote>
+<p>Document 可以分组。这种分组就叫做 Type，它是虚拟的逻辑分组，用来过滤 Document。</p>
+<p>不同的 Type 应该有相似的结构（schema）。这是与关系型数据库的表的一个区别。性质完全不同的数据应该存成两个 Index，而不是一个 Index 里面的两个 Type（虽然可以做到）。</p>
+<p>Elastic 6.x 版只允许每个 Index 包含一个 Type，7.x 版将会彻底移除 Type。</p>
+<blockquote>
+<p>关系型数据库和ES对比，方便理解</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>关系型数据库</th>
+<th>ElasticSearch（都是JSON）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据库（database）</td>
+<td>索引（Indices）</td>
+</tr>
+<tr>
+<td>表（tables）</td>
+<td>类型（types）会被弃用</td>
+</tr>
+<tr>
+<td>行（rows）</td>
+<td>文档（documents）</td>
+</tr>
+<tr>
+<td>字段（columns）</td>
+<td>字段（fields）</td>
+</tr>
+</tbody></table>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><blockquote>
+<p>分片</p>
+</blockquote>
+<p><strong>TODO</strong></p>
+<blockquote>
+<p>倒排索引</p>
+</blockquote>
+<p><strong>TODO</strong></p>
+<p>来源参考：</p>
+<ol>
+<li>狂神说Java（B站视频） <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17a4y1x7zq">https://www.bilibili.com/video/BV17a4y1x7zq</a></li>
+<li>阮一峰（日志） <a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2017/08/elasticsearch.html">http://www.ruanyifeng.com/blog/2017/08/elasticsearch.html</a></li>
+</ol>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 小张<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
