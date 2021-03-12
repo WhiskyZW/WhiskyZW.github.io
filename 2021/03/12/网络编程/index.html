@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="学习写博客"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="小张"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="网络编程"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="学习写博客"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="WhiskyZW"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://example.comimg/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="http://example.comimg/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>网络编程 - WhiskyZW</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">张大厨</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>网络编程</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-03-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
+<p>计算机网络</p>
+</blockquote>
+<p>​    计算机网络是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统。</p>
+<p>​    网络编程的目的：数据交换，通信</p>
+<pre><code>1. 如何准确的定位网络上的一台主机 192.168.X.X :端口 定位到这个计算机上的某个资源
+ 2. 找到了主机如何传输数据
+ * JavaWeb：网页编程   B/S结构（Browser/Server，浏览器/服务器模式）
+ * 网络编程：TCP/IP      C/S结构 （Client-Serve，服务器-客户机结构）
+</code></pre>
+<blockquote>
+<p>网络通信要素</p>
+</blockquote>
+<ul>
+<li>通信双方地址<ul>
+<li>IP + 端口号</li>
+</ul>
+</li>
+<li>规则：网络通信协议<ul>
+<li>TCP/IP</li>
+<li>OSI 七层模型</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2021/03/12/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/osi.png" alt="OSI七层模型"><br><img src="/2021/03/12/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/osi-tcp.jpg" alt="OSI-TCP"></p>
+<h2 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h2><p>​    Java IP地址： InetAddress</p>
+<ul>
+<li><p>唯一定位一台网络计算机</p>
+</li>
+<li><p>127.0.0.1： 本机localhost</p>
+</li>
+<li><p>IP地址的分类</p>
+<ul>
+<li><p>ipv4/ipv6</p>
+<ul>
+<li><p>ipv4 </p>
+<p>使用32位（4字节）地址，因此<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4">地址空间</a>中只有4,294,967,296（2）个地址</p>
+<p>2011年用尽。2019年11月26日，全球所有43亿个IPv4地址已分配完毕</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br></pre></td></tr></table></figure></li>
+<li><p>ipv6 </p>
+<p>地址长度为128位，是IPv4地址长度的4倍。最大地址个数为2^128。与32位地址空间相比，其地址空间增加了2^128-2^32个。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2409</span>:8a1e:<span class="number">84e2</span>:f420:6d61:ee71:<span class="number">1931</span>:c61c</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>公网（互联网）-私网（局域网）</p>
+<ul>
+<li>ABCD类地址</li>
+<li>192.168.XX.XX 专门给组织内部使用的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>端口表示计算机上的一个程序的进程</p>
+<ul>
+<li><p>不同的进程有不同的端口号！用来区分软件</p>
+</li>
+<li><p>被规定：0~65535</p>
+</li>
+<li><p>TCP，UDP： 单个协议下端口不能冲突</p>
+</li>
+<li><p>端口分类</p>
+<ul>
+<li><p>公有端口：0~1023</p>
+<ul>
+<li>HTTP：80，<a target="_blank" rel="noopener" href="http://www.baidu.com/">http://www.baidu.com</a> = <a target="_blank" rel="noopener" href="http://www.baidu.com/">http://www.baidu.com:80</a></li>
+<li>HTTPS：443，<a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com</a> = <a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com:443</a></li>
+<li>FTP：21</li>
+<li>Telent：23</li>
+</ul>
+</li>
+<li><p>程序注册端口：1024~49151，分配用户或者程序</p>
+<ul>
+<li>Tomcat：8080</li>
+<li>Mysql：3306</li>
+<li>Oracle：1521</li>
+<li>Redis：6379</li>
+<li>ElasticSearch：9200</li>
+</ul>
+</li>
+<li><p>动态，私有：49152~65535</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano <span class="comment">// 查看所有端口</span></span><br><span class="line">netstat -ano|findstr <span class="string">&quot;5500&quot;</span> <span class="comment">//查询指定端口</span></span><br><span class="line">tasklist|findstr <span class="string">&quot;8696&quot;</span> <span class="comment">//查询指定端口进程</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="通信协议"><a href="#通信协议" class="headerlink" title="通信协议"></a>通信协议</h2><p>网络通信协议：速率，传输码率，代码结构，传输控制……</p>
+<p><strong>TCP/IP协议簇：实际上是一组协议</strong></p>
+<ul>
+<li>TCP（Transmission Control Protocol）：传输控制协议</li>
+<li>UDP（User Data Protocol）：用户数据报协议</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>TCP</th>
+<th>UDP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>是否连接</td>
+<td>面向连接</td>
+<td>面向非连接</td>
+</tr>
+<tr>
+<td>传输可靠性</td>
+<td>可靠</td>
+<td>不可靠</td>
+</tr>
+<tr>
+<td>应用场合</td>
+<td>少量数据</td>
+<td>传输大量数据</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>慢</td>
+<td>快</td>
+</tr>
+</tbody></table>
+<ol>
+<li>TCP面向连接（如打电话要先拨号建立连接）;UDP是无连接的，即发送数据之前不需要建立连接</li>
+<li>TCP提供可靠的服务。也就是说，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达;UDP尽最大努力交付，即不保证可靠交付</li>
+<li>TCP面向字节流，实际上是TCP把数据看成一连串无结构的字节流;UDP是面向报文的</li>
+<li>UDP没有拥塞控制，因此网络出现拥塞不会使源主机的发送速率降低（对实时应用很有用，如IP电话，实时视频会议等）</li>
+<li>每一条TCP连接只能是点到点的;UDP支持一对一，一对多，多对一和多对多的交互通信</li>
+<li>TCP首部开销20字节;UDP的首部开销小，只有8个字节</li>
+<li>TCP的逻辑通信信道是全双工的可靠信道，UDP则是不可靠信道</li>
+</ol>
+<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>统一资源定位符：定位资源的，定位互联网上的某一个资源</p>
+<p>DNS域名解析  例子：<a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com</a> =&gt; XXX.XXX.XXX.XXX</p>
+<p>格式：协议://IP地址:端口/项目名称/资源</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 小张<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
