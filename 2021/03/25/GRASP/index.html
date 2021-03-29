@@ -229,13 +229,73 @@
 </ul>
 <blockquote>
 <p>低耦合（Low coupling）</p>
-<p>高内聚（High cohesion）</p>
-<p>控制器（Controller）</p>
-<p>多态性（Polymorphism）</p>
-<p>纯虚构（Pure Fabrication）</p>
-<p>间接性（Indirection）</p>
-<p>变化预防（Protected Variations）</p>
 </blockquote>
+<ul>
+<li>分配职责时，使耦合性尽可能的低</li>
+</ul>
+<p>解决方案：分配职责时，使耦合性尽可能的低</p>
+<ul>
+<li>低耦合模式的意思就是要我们尽可能地减少类之间的连接。</li>
+</ul>
+<blockquote>
+<p>高内聚（High cohesion）</p>
+</blockquote>
+<ul>
+<li>给类尽量分配内聚的职责，也可以说成是功能性内聚的职责。</li>
+<li>功能性紧密相关的职责应该放在一个类里，并共同完成有限的功能，那么就是高内聚合。</li>
+<li>有利于类的理解和重用，也便于类的维护。</li>
+</ul>
+<blockquote>
+<p>控制器（Controller）</p>
+</blockquote>
+<p>用来接受和处理系统事件的职责，一般应该分配给一个能够代表整个系统的类，这样的类通常被命名为“XX处理器”、“XX协调器”或“XX会话”。</p>
+<ul>
+<li>系统事件的接收与处理通常由一个高级类来代替。</li>
+<li>一个子系统会有很多控制类，分别处理不同的事务。</li>
+</ul>
+<blockquote>
+<p>多态性（Polymorphism）</p>
+</blockquote>
+<ul>
+<li>跟 OO 三大基本特征之一的“多态”是一个意思。</li>
+<li>当相关选择或行为随类型有所不同时，使用多态操作为变化的行为类型分配职责。</li>
+</ul>
+<blockquote>
+<p>纯虚构（Pure Fabrication）</p>
+</blockquote>
+<ul>
+<li><p>人为的制造一个类分配一组高内聚的职责，该类并不代表问题领域里面的概念，是需要的类，用以支持高内聚和低耦合。</p>
+</li>
+<li><p>高内聚低耦合，是系统设计的终极目标，但是内聚和耦合永远都是矛盾对立的。高内聚以为这拆分出更多数量的类，但是对象之间需要协作来完成任务，这又造成了高耦合，反过来依然。该如何解决这个矛盾呢？这个时候就需要纯虚构模式，由一个纯虚构的类来协调内聚和耦合，可以在一定程度上解决上述问题。</p>
+</li>
+</ul>
+<blockquote>
+<p>间接性（Indirection）</p>
+</blockquote>
+<ul>
+<li><p>将职责分配给中介对象，是其作为其他构件或服务之间的媒介，以避免它们之间的直接耦合，中介实现了其他构件之间的间接性。</p>
+</li>
+<li><p>本来直接会连接在一起的对象彼此隔离开了，一个变动不会影响另一个。</p>
+</li>
+<li><p>就像我在前面的低耦合模式里说的一样，“两个不同模块的内部类之间不能直接连接”，但是我们可以通过中间类来间接连接两个不同的模块，这样对于这两个模块来说，他们之间仍然是没有耦合/依赖关系的。</p>
+</li>
+</ul>
+<blockquote>
+<p>防止变异（Protected Variations）</p>
+</blockquote>
+<ul>
+<li><p>识别变化或不稳定的地方，分配职责用以在变化地方创建稳定的接口。</p>
+</li>
+<li><p>如果未来发生变化的时候，可以通过接口扩展新的功能，而不需要去修改原来旧的实现。</p>
+</li>
+<li><p>可以把这个模式理解为 OCP（开闭原则），就是说一个软件实体应当对拓展开发，对修改关闭。</p>
+</li>
+<li><p>在设计一个模块的时候，要保证这个模块可以在不需要被修改的前提下可以得到拓展。</p>
+</li>
+<li><p>这样做的好处就是通过拓展给系统提供了新的职责，以满足新的需求，同时又没有改变系统原来的功能。</p>
+</li>
+</ul>
+<h3 id="关系图"><a href="#关系图" class="headerlink" title="关系图"></a>关系图</h3><p><img src="https://img-blog.csdnimg.cn/20201209170437134.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dmZWlp,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
 
 
                 
